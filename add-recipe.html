@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Recipe | Foodie Fusion</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="images/logo-designer.png" alt="Logo">
+        </div>
+        <div id="SearchBar">
+            <input type="text" placeholder="Find a recipe or ingredient">
+            <button class="search-bg"></button>
+            <div id="searchIcon">
+                <img src="images/magnifyGlass.png" alt="magnifyingGlass">               
+            </div>
+        </div> 
+    </nav>
+    <main>
+        <div class="recipe-form">
+            <form>
+                <h1 class="h1recipe">Add a Recipe</h1>
+                <div class="recipe-form-description">
+                    Uploading personal recipes is easy! Add yours to your favorites, share with friends, family, or the FoodieFusion community.
+                </div>
+                <fieldset class="description">
+                  <div>
+                      <div class="Recipe-Title">Recipe Title
+                        <input type="text" placeholder="Give your recipe a title" required>
+                      </div>
+                     <div class="Description-Title">Description
+                        <textarea placeholder="Share the story behind your recipe and what makes it special." required></textarea>
+                      </div>
+                  </div>
+                  <div class="photoPart">
+                    <div class="Photo-Title">Photo(Optional)</div>
+                      <div class="photo-container">
+                            <input aria-labelledby="photoUploadFileAdd" aria-describedby="uploadSection" type="file" id="photoUploadFileAdd"
+                            class="uploadPicture" accept="image/*">
+                      </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

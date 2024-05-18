@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+   position: relative;
+    top: 0;
+    color: black;
+    font-size: 15px;
+    box-shadow: 0 .125rem .375rem rgba(0, 0, 0, .15);
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 125px;
+    max-width: 100vw;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+#SearchBar {
+    position: relative;
+    display: inline-block;
+}
+
+#SearchBar input {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 15px;
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+  }
+
+.search-bg {
+    position: absolute; 
+    top: 59%;
+    right: 12px; 
+    transform: translateY(-50%); 
+    margin-right: 5px; 
+    height: 37px;
+    width: 37px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: none;
+    background-color: #D54215; 
+    cursor: pointer;
+    
+}
+
+.search-bg:hover {
+    background-color:#bd2d02 ;
+}
+
+#searchIcon img {
+    position: absolute; 
+    top: 59%;
+    right: 17px; 
+    transform: translateY(-50%); 
+    margin-right: 5px;  
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+
+#logo img {
+    width: 250px; 
+    height: auto;
+    margin-top: 15px;
+    margin-left: 140px;
+    cursor: pointer;
+    
+}
+
+.Login-container-card{
+    margin-left: 10px;
+}
+
+#loginButton img{
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  bottom: 641px;
+}
+
+.Login-container-card p {
+    position: fixed;
+    margin-left: 28px;
+    top: 55px;
+    cursor: pointer;
+}
+
+.Login-container-card p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:#D54215;
+    transition: width 0.3s
+}
+
+.Login-container-card p:hover::after {
+    width: 110%; 
+}
+
+.recipe {
+  position: relative;
+  margin-top: 90px;
+}
+
+.modal-login {
+  display: none; /* Initially hides the modal */
+  position: absolute;
+  top: 88px;
+  left: 940px; 
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  height: 65px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+#loginButton:hover + #modal-login,
+#modal-login:hover {
+  display: block; /* Shows the modal when loginButton is hovered or the modal itself is hovered */
+}
+
+.modal-login ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal li {
+  padding: 5px 10px;
+}
+
+.modal li:hover {
+  background-color: #f0f0f0;
+}
+
+.recipe #submitRecipeButton{
+  position: relative;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: black;
+  bottom: 100px;
+  background-color: white; 
+  width: 190px;    
+  height: 40px;
+  right: 40px;
+}
+
+#submitRecipeButton:hover{
+    background-color: #f0f0f0;
+}
+
+.Log-out #logout-btn{
+  position: relative;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: black;
+  bottom: 100px;
+  background-color: white; 
+  width: 250px;    
+  height: 40px;
+  right: 100px;
+}
+
+#logout-btn:hover{
+  background-color: #f0f0f0;
+}
+
+/*Recipe*/
+.recipe-form{
+  width: 640px;
+  margin: 170px auto; 
+  padding: 20px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; 
+}
+
+.h1recipe{
+  font-family:Arial, Helvetica, sans-serif;
+  box-shadow: inset 0 -24px 0 0 #e7ab46;
+  padding-bottom: 8px;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.recipe-form-description{
+  font-family: sans-serif;
+  margin-bottom: 32px;
+}
+
+.description{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+fieldset{
+  border-top: 0.5px solid grey;
+  min-inline-size: min-content;
+  border-left: none; 
+  border-right: none; 
+  border-bottom: none;
+}
+
+.Recipe-Title{
+  margin-top: 10px;
+  font-weight: 700;
+}
+.Recipe-Title input{
+  width: 100%;
+  height: 48px;
+  letter-spacing: 0;
+  outline: none;
+  min-height: 48px;
+  border: 2px solid #ccc;
+  margin-top: 8px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.Recipe-Title input:focus {
+  border-color: #D54215; 
+}
+
+.Description-Title{
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.Description-Title textarea{
+  font-family: Arial, Helvetica, sans-serif;
+  font: 400 16px;
+  width: 100%;
+  min-height: 168px;
+  height: 168px;
+  letter-spacing: 0;
+  outline: none;
+  min-height: 48px;
+  border: 2px solid #ccc;
+  margin-top: 8px;
+  padding: 16px 16px;
+  box-sizing: border-box;
+  white-space: normal;
+  resize: none;
+}
+
+.Description-Title textarea:focus {
+  border-color: #D54215; 
+}
+
+.photoPart{
+  position: relative;
+  width: 224px;
+  height: 224px;
+}
+.Photo-Title{
+    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.photo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .05);
+    margin: auto;
+}

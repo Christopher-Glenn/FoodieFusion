@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Authenthication-->
+    <script src="firebaseConfig.js" defer type="module"></script>
+    <title>Foodie Fusion</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="images/logo-designer.png" alt="Logo">
+            </div>
+            <div id="SearchBar">
+                <input type="text" placeholder="Find a recipe or ingredient">
+                <button class="search-bg"></button>
+                <div id="searchIcon">
+                    <img src="images/magnifyGlass.png" alt="magnifyingGlass">               
+                </div>
+            </div> 
+            
+            <div class="Login-container-card">
+                <div id="loginButton">
+                    <img src="images/user.png" alt="user-profile">
+                    <p id="loginText">Login</p> 
+                </div>
+                <div id="modal-login" class="modal-login" style="display:none;">
+                    <ul>
+                        <li class="recipe">
+                            <button id="submitRecipeButton">Submit a Recipe</button>
+                        </li>
+                        <li class="Log-out">
+                            <button id="logout-btn">Log Out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <!-- Recipe listing -->
+        <div id="recipe-list">
+            <!-- Individual recipe cards will be displayed here -->
+        </div>
+
+        <!-- Recipe creation/editing form -->
+        
+    </main>
+
+    <footer>
+        <!-- Footer content can be added here -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script> 
+    
+</body>
+
+</html>
