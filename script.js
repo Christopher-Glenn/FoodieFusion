@@ -1,4 +1,3 @@
-//Nav bar scroll funtion
 
 const recipe = document.getElementById('submitRecipeButton');
     recipe.addEventListener("click", () =>{

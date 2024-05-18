@@ -17,21 +17,17 @@ const auth = getAuth(app);
 auth.languageCode = 'en';
 const provider = new GoogleAuthProvider();
 
-// Get the login button, submit recipe button, and user info container elements
 const loginButton = document.getElementById("loginButton");
 const loginText = document.getElementById("loginText");
 const userProfileImg = loginButton.querySelector("img[alt='user-profile']");
 const submitRecipeButton = document.getElementById("submitRecipeButton");
 const userInfoContainer = document.getElementById("userInfo");
 
-// Handle Google login button click
 loginButton.addEventListener("click", () => {
     signInWithPopup(auth, provider)
     .then((result) => {
         const user = result.user;
         console.log(user);
-
-        // Update UI after successful login
         updateUI(user);
     })
     .catch((error) => {
@@ -39,17 +35,15 @@ loginButton.addEventListener("click", () => {
     });
 });
 
-// Get the logout button element
 const logoutButton = document.getElementById("logout-btn");
 
-// Handle logout button click
 logoutButton.addEventListener("click", () => {
   signOut(auth)
   .then(() => {
-      // Sign-out successful.
+    
       console.log("User signed out");
-      // Redirect to the homepage or another page
-      window.location.href = "main.html"; 
+ 
+      window.location.href = "index.html"; 
   })
   .catch((error) => {
       // An error happened.
@@ -64,11 +58,11 @@ function initializeModal() {
   const modal = document.getElementById('modal-login');
 
   const showModal = () => {
-    modal.style.display = 'block'; // Show the modal when hovered
+    modal.style.display = 'block'; 
   };
 
   const hideModal = () => {
-    modal.style.display = 'none'; // Hide the modal when mouseout
+    modal.style.display = 'none'; 
   };
 
   login.addEventListener('mouseover', showModal);
@@ -78,21 +72,17 @@ function initializeModal() {
   modal.addEventListener('mouseout', hideModal);
 }
 
-// Function to update UI after successful login
 function updateUI(user) {
   isUIUpdated = true;
 
-  // Update the login button text to the user's display name or email
   if (loginText) {
     loginText.textContent = user.displayName || user.email;
   }
 
-  // Update the profile picture to the user's Google profile picture
   if (userProfileImg) {
     userProfileImg.src = user.photoURL;
   }
 
-  // Optionally update user info section with the user's details
   if (userInfoContainer) {
     userInfoContainer.style.display = "block";
     userInfoContainer.innerHTML = `
