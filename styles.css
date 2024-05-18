@@ -117,7 +117,7 @@ body {
 }
 
 .modal-login {
-  display: none; /* Initially hides the modal */
+  display: none;
   position: absolute;
   top: 88px;
   left: 940px; 
@@ -133,7 +133,7 @@ body {
 
 #loginButton:hover + #modal-login,
 #modal-login:hover {
-  display: block; /* Shows the modal when loginButton is hovered or the modal itself is hovered */
+  display: block;
 }
 
 .modal-login ul {
